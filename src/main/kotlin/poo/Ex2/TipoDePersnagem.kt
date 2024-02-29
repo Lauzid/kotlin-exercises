@@ -1,4 +1,4 @@
-package POO.Ex2
+package poo.Ex2
 
 enum class TipoDePersnagem {
     ARQUEIRO,

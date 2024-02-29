@@ -1,4 +1,4 @@
-package POO.Ex2
+package poo.Ex2
 
 class Personagem(val nome:String, val tipoDePersnagem: TipoDePersnagem) {
     var vida: Int = 1000

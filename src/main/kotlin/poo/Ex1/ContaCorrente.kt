@@ -1,4 +1,4 @@
-package POO.Ex1
+package poo.Ex1
 
 class ContaCorrente (private val numero: Int, private var saldo: Double) {
 

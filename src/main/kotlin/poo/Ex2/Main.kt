@@ -1,4 +1,4 @@
-package POO.Ex2
+package poo.Ex2
 
 fun main () {
     val p1 = Personagem("Legolas", TipoDePersnagem.ARQUEIRO)

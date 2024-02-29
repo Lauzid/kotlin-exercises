@@ -1,4 +1,4 @@
-package POO.Ex1
+package poo.Ex1
 
 fun main() {
     val minhaConta = ContaCorrente(1234, 1000.0)
