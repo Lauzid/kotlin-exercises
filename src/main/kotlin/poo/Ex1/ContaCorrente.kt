@@ -36,4 +36,38 @@ class ContaCorrente (private val numero: Int, private var saldo: Double) {
         println("O número da conta é: ${getNumero()} e o seu saldo é de: ${getSaldo()}.")
         println("Quantidade de contas criadas: $contas")
     }
+
+    fun transferencia (tipo: String, favorecido: ContaCorrente, montante: Double) {
+        when (tipo) {
+            "PIX" -> {
+                if (this.saldo >= montante) {
+                    this.saldo -= montante
+                    favorecido.saldo += montante
+                    println("Transferência $tipo da conta ${this.numero} de valor ${montante}R$ recebida com sucesso na conta ${favorecido.numero}.")
+                } else {
+                    println("Saldo insuficiente na conta ${this.numero} para receber a transferência $tipo.")
+                }
+            }
+            "TED" -> {
+                val taxa = 15
+                if (this.saldo >= montante) {
+                    this.saldo -= montante + taxa
+                    favorecido.saldo += montante
+                    println("Transferência $tipo da conta ${this.numero} de valor ${montante}R$ recebida com sucesso na conta ${favorecido.numero}. Taxa $tipo subtraída: ${taxa}R$")
+                } else {
+                    println("Saldo insuficiente na conta ${this.numero} para receber a transferência $tipo.")
+                }
+            }
+            "DOC" -> {
+                val taxa = 18
+                if (this.saldo >= montante) {
+                    this.saldo -= montante + taxa
+                    favorecido.saldo += montante
+                    println("Transferência $tipo da conta ${this.numero} de valor ${montante}R$ recebida com sucesso na conta ${favorecido.numero}. Taxa $tipo subtraída: ${taxa}R$")
+                } else {
+                    println("Saldo insuficiente na conta ${this.numero} para receber a transferência $tipo.")
+                }
+            }
+        }
+    }
 }

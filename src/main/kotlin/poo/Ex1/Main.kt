@@ -1,19 +1,14 @@
 package poo.Ex1
 
 fun main() {
-    val minhaConta = ContaCorrente(1234, 1000.0)
+    val Conta1 = ContaCorrente(333, 1000.0)
+    val Conta2 = ContaCorrente(444, 500.0)
+    println("saldo da conta 1: ${Conta1.getSaldo()}")
+    println("saldo da conta 2: ${Conta2.getSaldo()}")
 
-    minhaConta.imprimir()
+    Conta1.transferencia("DOC", Conta2, 100.0)
 
-    minhaConta.creditar(120.0)
-
-    minhaConta.debitar(2000.0)
-
-    minhaConta.debitar(200.0)
-
-    val minhaConta2 = ContaCorrente(1235, 500.0)
-    minhaConta2.creditar(20.0)
-
-    minhaConta.imprimir()
+    println("saldo da conta 1: ${Conta1.getSaldo()}")
+    println("saldo da conta 2: ${Conta2.getSaldo()}")
 
 }
