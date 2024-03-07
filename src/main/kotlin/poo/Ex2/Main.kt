@@ -33,4 +33,18 @@ fun main () {
     p2.isContratado()
     ex1.removeTropa(p2)
 
+    //
+
+    ex1.mostrarTropas()
+    ex2.mostrarTropas()
+
+    // Batalhar
+
+    // Empate
+    ex1.addTropa(p2)
+    ex1.batalhar(ex2)
+
+    // Vitória
+    ex1.removeTropa(p2)
+    ex1.batalhar(ex2)
 }

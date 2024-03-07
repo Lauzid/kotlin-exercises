@@ -14,4 +14,7 @@ class Personagem(val nome:String, val tipoDePersnagem: TipoDePersnagem) {
     fun isContratado () {
         println("$nome está contratado? $contratado")
     }
+    fun getVida ():Int {
+        return vida
+    }
 }
