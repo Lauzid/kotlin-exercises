@@ -29,8 +29,6 @@ class Exercito (val nome: String) {
         println("")
     }
     fun batalhar (inimigo: Exercito) {
-//        val desafianteForca = tropas.sumBy { it.getVida() }
-//        val inimigoForca = inimigo.tropas.sumBy { it.getVida() }
         var desafianteForca = 0
         for (tropa in tropas) {
             desafianteForca += tropa.getVida()
